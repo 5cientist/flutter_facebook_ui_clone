@@ -42,6 +42,10 @@ class Home extends StatelessWidget {
               color: Colors.grey[300],
             ),
             HeaderButtonSection(),
+            Divider(
+              thickness: 10,
+              color: Colors.grey[300],
+            )
           ],
         ),
       ),
