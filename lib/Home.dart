@@ -1,3 +1,4 @@
+import 'package:facebook_clone/sections/headerButtonSection.dart';
 import 'package:facebook_clone/sections/statusSection.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_clone/widgets/appBarButton.dart';
@@ -40,6 +41,7 @@ class Home extends StatelessWidget {
               thickness: 1,
               color: Colors.grey[300],
             ),
+            HeaderButtonSection(),
           ],
         ),
       ),
