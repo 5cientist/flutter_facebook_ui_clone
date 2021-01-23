@@ -7,6 +7,14 @@ import 'package:facebook_clone/widgets/appBarButton.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Widget thinDivider = Divider(
+      thickness: 1,
+      color: Colors.grey[300],
+    );
+    Widget thickDivider = Divider(
+      thickness: 10,
+      color: Colors.grey[300],
+    );
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -38,16 +46,11 @@ class Home extends StatelessWidget {
         body: ListView(
           children: [
             statusSection(),
-            Divider(
-              thickness: 1,
-              color: Colors.grey[300],
-            ),
+            thinDivider,
             HeaderButtonSection(),
-            Divider(
-              thickness: 10,
-              color: Colors.grey[300],
-            ),
+            thickDivider,
             RoomSection(),
+            thickDivider,
           ],
         ),
       ),
