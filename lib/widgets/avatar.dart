@@ -10,27 +10,28 @@ class Avatar extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    Widget statusIndicator;
-    if (displayStatus == true) {
-      statusIndicator = Positioned(
-        bottom: 0,
-        right: 1,
-        child: Container(
-          height: 15,
-          width: 15,
-          decoration: BoxDecoration(
-            color: Colors.greenAccent,
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: Colors.white,
-              width: 2,
-            ),
-          ),
-        ),
-      );
-    } else {
-      statusIndicator = SizedBox();
-    }
+    // Widget statusIndicator;
+    // if (displayStatus == true) {
+    //   statusIndicator = Positioned(
+    //     bottom: 0,
+    //     right: 1,
+    //     child: Container(
+    //       height: 15,
+    //       width: 15,
+    //       decoration: BoxDecoration(
+    //         color: Colors.greenAccent,
+    //         shape: BoxShape.circle,
+    //         border: Border.all(
+    //           color: Colors.white,
+    //           width: 2,
+    //         ),
+    //       ),
+    //     ),
+    //   );
+    // } else {
+    //   statusIndicator = SizedBox();
+    // }
+
     return Stack(
       children: [
         Container(
@@ -44,7 +45,24 @@ class Avatar extends StatelessWidget {
             ),
           ),
         ),
-        statusIndicator,
+        displayStatus == true
+            ? Positioned(
+                bottom: 0,
+                right: 1,
+                child: Container(
+                  height: 15,
+                  width: 15,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 2,
+                    ),
+                  ),
+                ),
+              )
+            : SizedBox(),
       ],
     );
   }
