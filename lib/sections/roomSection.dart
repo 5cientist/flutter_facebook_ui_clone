@@ -27,22 +27,25 @@ class RoomSection extends StatelessWidget {
   }
 
   Widget createRoomButton() {
-    return OutlineButton.icon(
-      shape: StadiumBorder(),
-      onPressed: () {
-        print("create new room");
-      },
-      icon: Icon(
-        Icons.video_call,
-        color: Colors.purple,
-      ),
-      label: Text(
-        "Create \nRoom",
-        style: TextStyle(
-          color: Colors.blue,
+    return Container(
+      padding: EdgeInsets.only(left: 5, right: 5),
+      child: OutlineButton.icon(
+        shape: StadiumBorder(),
+        onPressed: () {
+          print("create new room");
+        },
+        icon: Icon(
+          Icons.video_call,
+          color: Colors.purple,
         ),
+        label: Text(
+          "Create \nRoom",
+          style: TextStyle(
+            color: Colors.blue,
+          ),
+        ),
+        borderSide: BorderSide(color: Colors.blue[100], width: 2),
       ),
-      borderSide: BorderSide(color: Colors.blue[100], width: 2),
     );
   }
 }
