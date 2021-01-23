@@ -2,7 +2,7 @@ import 'package:facebook_clone/widgets/avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_clone/assets.dart';
 
-class statusSection extends StatelessWidget {
+class StatusSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
