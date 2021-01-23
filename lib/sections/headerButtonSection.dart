@@ -19,7 +19,7 @@ class HeaderButtonSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget VerticalDivider = VerticalDivider(
+    Widget verticalDivider = VerticalDivider(
       thickness: 1,
       color: Colors.grey[300],
     );
@@ -36,7 +36,7 @@ class HeaderButtonSection extends StatelessWidget {
                 print("Go to Live");
               },
               buttonColor: Colors.red),
-          VerticalDivider,
+          verticalDivider,
           headerButton(
               buttonText: "Photos",
               buttonIcon: Icons.photo_library,
@@ -44,7 +44,7 @@ class HeaderButtonSection extends StatelessWidget {
                 print("Take photo");
               },
               buttonColor: Colors.green),
-          VerticalDivider,
+          verticalDivider,
           headerButton(
               buttonText: "Room",
               buttonIcon: Icons.video_call,
