@@ -7,7 +7,7 @@ class HeaderButtonSection extends StatelessWidget {
     @required void Function() buttonAction,
     @required Color buttonColor,
   }) {
-    return FlatButton.icon(
+    return TextButton.icon(
       onPressed: buttonAction,
       icon: Icon(
         buttonIcon,
