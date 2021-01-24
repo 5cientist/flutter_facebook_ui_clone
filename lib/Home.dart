@@ -1,7 +1,9 @@
+import 'package:facebook_clone/assets.dart';
 import 'package:facebook_clone/sections/headerButtonSection.dart';
 import 'package:facebook_clone/sections/roomSection.dart';
 import 'package:facebook_clone/sections/statusSection.dart';
 import 'package:facebook_clone/sections/storySection.dart';
+import 'package:facebook_clone/widgets/postCard.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_clone/widgets/circularButton.dart';
 
@@ -54,6 +56,11 @@ class Home extends StatelessWidget {
             thickDivider,
             StorySection(),
             thickDivider,
+            PostCard(
+              avatar: dq_avator,
+              name: "dulaqar",
+              publishedAt: "5 hr",
+            ),
           ],
         ),
       ),
