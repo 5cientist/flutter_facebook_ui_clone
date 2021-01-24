@@ -53,6 +53,7 @@ class Home extends StatelessWidget {
             RoomSection(),
             thickDivider,
             StorySection(),
+            thickDivider,
           ],
         ),
       ),
