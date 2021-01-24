@@ -1,3 +1,4 @@
+import 'package:facebook_clone/assets.dart';
 import 'package:facebook_clone/widgets/storyCard.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,32 @@ class StorySection extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          StoryCard(),
+          StoryCard(
+            labelText: "add to story",
+            avatar: dq_avator,
+            story: dq_avator,
+            createStoryStatus: true,
+          ),
+          StoryCard(
+            labelText: "Cristiano Ronaldo",
+            avatar: cr7_avator,
+            story: cr7post1,
+          ),
+          StoryCard(
+            labelText: "Cristiano Ronaldo",
+            avatar: cr7_avator,
+            story: cr7post2,
+          ),
+          StoryCard(
+            labelText: "jhon wick",
+            avatar: bilgates_avator,
+            story: khabib_post,
+          ),
+          StoryCard(
+            labelText: "jhon cena",
+            avatar: roman_avator,
+            story: pinarayi_post,
+          ),
         ],
       ),
     );

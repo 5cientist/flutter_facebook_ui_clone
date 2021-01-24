@@ -1,8 +1,21 @@
 import 'package:facebook_clone/assets.dart';
+import 'package:facebook_clone/widgets/avatar.dart';
 import 'package:facebook_clone/widgets/circularButton.dart';
 import 'package:flutter/material.dart';
 
 class StoryCard extends StatelessWidget {
+  final String labelText;
+  final String story;
+  final String avatar;
+  final bool createStoryStatus;
+
+  StoryCard({
+    @required this.labelText,
+    @required this.story,
+    @required this.avatar,
+    this.createStoryStatus = false,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,7 +23,7 @@ class StoryCard extends StatelessWidget {
       margin: EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(dq_avator),
+          image: AssetImage(story),
           fit: BoxFit.cover,
         ),
         borderRadius: BorderRadius.circular(15),
@@ -20,22 +33,28 @@ class StoryCard extends StatelessWidget {
           Positioned(
             left: 5,
             top: 5,
-            child: CircularButton(
-              buttonIcon: Icons.add,
-              iconColor: Colors.blue,
-              buttonAction: () {
-                print("create new story !");
-              },
-            ),
+            child: createStoryStatus
+                ? CircularButton(
+                    buttonIcon: Icons.add,
+                    iconColor: Colors.blue,
+                    buttonAction: () {
+                      print("create new story !");
+                    },
+                  )
+                : Avatar(
+                    displayImage: avatar,
+                    displayStatus: false,
+                  ),
           ),
           Positioned(
             bottom: 10,
             left: 10,
             child: Text(
-              "Add to Story",
+              labelText != Null ? labelText : "N/A",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
