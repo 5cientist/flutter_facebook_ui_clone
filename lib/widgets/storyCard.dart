@@ -8,12 +8,14 @@ class StoryCard extends StatelessWidget {
   final String story;
   final String avatar;
   final bool createStoryStatus;
+  final bool displayBorder;
 
   StoryCard({
     @required this.labelText,
     @required this.story,
     @required this.avatar,
     this.createStoryStatus = false,
+    this.displayBorder = false,
   });
 
   @override
@@ -44,6 +46,7 @@ class StoryCard extends StatelessWidget {
                 : Avatar(
                     displayImage: avatar,
                     displayStatus: false,
+                    displayBorder: displayBorder,
                   ),
           ),
           Positioned(

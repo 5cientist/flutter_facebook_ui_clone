@@ -22,16 +22,19 @@ class StorySection extends StatelessWidget {
             labelText: "Cristiano Ronaldo",
             avatar: cr7_avator,
             story: cr7post1,
+            displayBorder: true,
           ),
           StoryCard(
             labelText: "Cristiano Ronaldo",
             avatar: cr7_avator,
             story: cr7post2,
+            displayBorder: true,
           ),
           StoryCard(
             labelText: "jhon wick",
             avatar: bilgates_avator,
             story: khabib_post,
+            displayBorder: true,
           ),
           StoryCard(
             labelText: "jhon cena",
