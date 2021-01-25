@@ -18,45 +18,49 @@ class PostCard extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          ListTile(
-            leading: Avatar(
-              displayImage: avatar,
-              displayStatus: false,
-            ),
-            title: Row(
-              children: [
-                Text(
-                  name,
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                ),
-                SizedBox(width: 10),
-                BlueTick(),
-              ],
-            ),
-            subtitle: Row(
-              children: [
-                Text(publishedAt == null ? "" : publishedAt),
-                SizedBox(width: 10),
-                Icon(
-                  Icons.public,
-                  color: Colors.grey[700],
-                  size: 15,
-                ),
-              ],
-            ),
-            trailing: IconButton(
-              onPressed: () {
-                print("open more menu");
-              },
-              icon: Icon(
-                Icons.more_horiz,
-                color: Colors.grey[700],
-              ),
+          postCardHeader(),
+        ],
+      ),
+    );
+  }
+
+  Widget postCardHeader() {
+    return ListTile(
+      leading: Avatar(
+        displayImage: avatar,
+        displayStatus: false,
+      ),
+      title: Row(
+        children: [
+          Text(
+            name,
+            style: TextStyle(
+              color: Colors.black,
             ),
           ),
+          SizedBox(width: 10),
+          BlueTick(),
         ],
+      ),
+      subtitle: Row(
+        children: [
+          Text(publishedAt == null ? "" : publishedAt),
+          SizedBox(width: 10),
+          Icon(
+            Icons.public,
+            color: Colors.grey[700],
+            size: 15,
+          ),
+        ],
+      ),
+      trailing: IconButton(
+        onPressed: () {
+          print("open more menu");
+        },
+        icon: Icon(
+          Icons.more_horiz,
+          color: Colors.grey[700],
+        ),
       ),
     );
   }
