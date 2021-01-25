@@ -7,11 +7,15 @@ class PostCard extends StatelessWidget {
   final String avatar;
   final String name;
   final String publishedAt;
+  final String postTitle;
+  final String postImage;
 
   PostCard({
     @required this.avatar,
     @required this.name,
     @required this.publishedAt,
+    @required this.postTitle,
+    @required this.postImage,
   });
   @override
   Widget build(BuildContext context) {
@@ -19,7 +23,29 @@ class PostCard extends StatelessWidget {
       child: Column(
         children: [
           postCardHeader(),
+          titleSection(),
+          imageSection(),
         ],
+      ),
+    );
+  }
+
+  Widget imageSection() {
+    return Container(
+      padding: EdgeInsets.only(top: 5, bottom: 5),
+      child: Image.asset(postImage),
+    );
+  }
+
+  Widget titleSection() {
+    return Container(
+      padding: EdgeInsets.only(bottom: 5),
+      child: Text(
+        postTitle == null ? "" : postTitle,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 16,
+        ),
       ),
     );
   }

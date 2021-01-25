@@ -60,6 +60,8 @@ class Home extends StatelessWidget {
               avatar: dq_avator,
               name: "dulaqar",
               publishedAt: "5 hr",
+              postTitle: "Happy Fighting !!",
+              postImage: pinarayi_post,
             ),
           ],
         ),
