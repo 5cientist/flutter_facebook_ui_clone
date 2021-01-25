@@ -9,6 +9,7 @@ class PostCard extends StatelessWidget {
   final String publishedAt;
   final String postTitle;
   final String postImage;
+  final bool showBlueTick;
 
   PostCard({
     @required this.avatar,
@@ -16,6 +17,7 @@ class PostCard extends StatelessWidget {
     @required this.publishedAt,
     @required this.postTitle,
     @required this.postImage,
+    this.showBlueTick = false,
   });
   @override
   Widget build(BuildContext context) {
@@ -65,7 +67,7 @@ class PostCard extends StatelessWidget {
             ),
           ),
           SizedBox(width: 10),
-          BlueTick(),
+          showBlueTick ? BlueTick() : SizedBox(),
         ],
       ),
       subtitle: Row(

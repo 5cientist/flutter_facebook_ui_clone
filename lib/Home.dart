@@ -62,6 +62,7 @@ class Home extends StatelessWidget {
               publishedAt: "5 hr",
               postTitle: "Happy Fighting !!",
               postImage: pinarayi_post,
+              showBlueTick: true,
             ),
           ],
         ),
