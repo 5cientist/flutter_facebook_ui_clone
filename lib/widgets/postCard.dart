@@ -27,7 +27,71 @@ class PostCard extends StatelessWidget {
           postCardHeader(),
           titleSection(),
           imageSection(),
+          footerSection(),
         ],
+      ),
+    );
+  }
+
+  Widget footerSection() {
+    return Container(
+      height: 50,
+      padding: EdgeInsets.only(left: 10, right: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            child: Row(
+              children: [
+                Container(
+                  width: 15,
+                  height: 15,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    Icons.thumb_up,
+                    color: Colors.white,
+                    size: 10,
+                  ),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                displayText(label: "10K"),
+              ],
+            ),
+          ),
+          Container(
+            child: Row(
+              children: [
+                displayText(label: "1K"),
+                SizedBox(
+                  width: 5,
+                ),
+                displayText(label: "Comments"),
+                SizedBox(
+                  width: 5,
+                ),
+                displayText(label: "500"),
+                SizedBox(
+                  width: 5,
+                ),
+                displayText(label: "Shares"),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget displayText({@required String label}) {
+    return Text(
+      label == Null ? "" : label,
+      style: TextStyle(
+        color: Colors.grey[700],
       ),
     );
   }
