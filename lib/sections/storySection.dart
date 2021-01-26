@@ -26,7 +26,7 @@ class StorySection extends StatelessWidget {
           ),
           StoryCard(
             labelText: "Cristiano Ronaldo",
-            avatar: cr7_avator,
+            avatar: mammooty_avator,
             story: cr7post2,
             displayBorder: true,
           ),

@@ -1,6 +1,8 @@
 import 'package:facebook_clone/assets.dart';
+import 'package:facebook_clone/sections/headerButtonSection.dart';
 import 'package:facebook_clone/widgets/avatar.dart';
 import 'package:facebook_clone/widgets/blueTick.dart';
+import 'package:facebook_clone/widgets/headerButton.dart';
 import 'package:flutter/material.dart';
 
 class PostCard extends StatelessWidget {
@@ -34,6 +36,35 @@ class PostCard extends StatelessWidget {
           titleSection(),
           imageSection(),
           footerSection(),
+          Divider(
+            color: Colors.grey[300],
+            thickness: 1,
+          ),
+          HeaderButtonSection(
+            buttonOne: headerButton(
+              buttonAction: () {
+                print("Like this post");
+              },
+              buttonColor: Colors.grey[700],
+              buttonIcon: Icons.thumb_up_alt_outlined,
+              buttonText: "Like",
+            ),
+            buttonTwo: headerButton(
+                buttonText: "Comments",
+                buttonIcon: Icons.message_outlined,
+                buttonAction: () {
+                  print("go to  comments ");
+                },
+                buttonColor: Colors.grey[700]),
+            buttonThree: headerButton(
+              buttonText: "Share",
+              buttonIcon: Icons.share_outlined,
+              buttonAction: () {
+                print("Share This Post  !");
+              },
+              buttonColor: Colors.grey[700],
+            ),
+          ),
         ],
       ),
     );
@@ -94,6 +125,14 @@ class PostCard extends StatelessWidget {
                   width: 25,
                   height: 25,
                 ),
+                IconButton(
+                    icon: Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.grey[700],
+                    ),
+                    onPressed: () {
+                      print("dropdown pressed from postCard");
+                    })
               ],
             ),
           )
