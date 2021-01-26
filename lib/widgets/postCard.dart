@@ -10,6 +10,9 @@ class PostCard extends StatelessWidget {
   final String postTitle;
   final String postImage;
   final bool showBlueTick;
+  final String likeCount;
+  final String shareCount;
+  final String commentCount;
 
   PostCard({
     @required this.avatar,
@@ -18,6 +21,9 @@ class PostCard extends StatelessWidget {
     @required this.postTitle,
     @required this.postImage,
     this.showBlueTick = false,
+    @required this.likeCount,
+    @required this.shareCount,
+    @required this.commentCount,
   });
   @override
   Widget build(BuildContext context) {
@@ -59,14 +65,14 @@ class PostCard extends StatelessWidget {
                 SizedBox(
                   width: 5,
                 ),
-                displayText(label: "10K"),
+                displayText(label: likeCount),
               ],
             ),
           ),
           Container(
             child: Row(
               children: [
-                displayText(label: "1K"),
+                displayText(label: commentCount),
                 SizedBox(
                   width: 5,
                 ),
@@ -74,11 +80,20 @@ class PostCard extends StatelessWidget {
                 SizedBox(
                   width: 5,
                 ),
-                displayText(label: "500"),
+                displayText(label: shareCount),
                 SizedBox(
                   width: 5,
                 ),
                 displayText(label: "Shares"),
+                SizedBox(
+                  width: 10,
+                ),
+                Avatar(
+                  displayImage: avatar,
+                  displayStatus: false,
+                  width: 25,
+                  height: 25,
+                ),
               ],
             ),
           )
